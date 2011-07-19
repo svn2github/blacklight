@@ -971,10 +971,10 @@
         </Setter>
     </Style>
 
-    <!-- ********** PANEL STYLES ********** -->
+<!-- ********** PANEL STYLES ********** -->
     <!-- DragDockPanel style -->
     <Style TargetType="local:DragDockPanel">
-        <Setter Property="Background" Value="#FFE3EEFB" />
+        <Setter Property="Background" Value="#ff000000" />
         <Setter Property="BorderBrush" Value="#ff333333" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Template">
@@ -984,7 +984,7 @@
 
                         <!-- Border with white background -->
                         <local:OuterGlowBorder 
-                            OuterGlowOpacity="0.4" OuterGlowSize="1"
+                            OuterGlowOpacity="0.4" OuterGlowSize="15"
                             CornerRadius="3,3,3,3" 
                             Background="{TemplateBinding Background}" 
                             BorderBrush="{TemplateBinding BorderBrush}" 
@@ -1001,24 +1001,19 @@
                                     </Grid.RowDefinitions>
 
                                     <!-- Content presenter for hosting the content -->
-                                    <ContentControl
-										Grid.Row="1"
-										 Content="{Binding DataContext.View, RelativeSource={RelativeSource TemplatedParent}}" Foreground="#FF2CC017"
-                 						HorizontalContentAlignment="Stretch"
-										VerticalContentAlignment="Stretch"/>
-
-
-
+                                    <ContentPresenter Grid.Row="1"
+                                                      Content="{TemplateBinding Content}"
+                                                      ContentTemplate="{TemplateBinding ContentTemplate}"/>
 
                                     <!-- 
                   Element named PART_GripBar for 
                   handling the dragging of the panel  
                   -->
 
-                                    <Border Background="#7F949697" Margin="-2" Padding="3">
+                                    <Border Background="#7f000000" Margin="-2" Padding="3">
                                         <Grid>
-                                            <Border x:Name="GripBarElement"   CornerRadius="3,3,0,0" Background="#00ffffff" VerticalAlignment="Top" MinHeight="20" Cursor="Hand"
-                                            Margin="0,0,22,0" IsHitTestVisible="{TemplateBinding DraggingEnabled}">
+                                            <Border x:Name="GripBarElement"   CornerRadius="3,3,0,0" Background="#00ffffff" VerticalAlignment="Top" MinHeight="30" Cursor="Hand"
+                                            Margin="0,0,32,0" IsHitTestVisible="{TemplateBinding DraggingEnabled}">
                                                 <Grid>
                                                     <Rectangle Opacity="0.5" >
                                                         <Rectangle.Fill>
@@ -1030,18 +1025,16 @@
                                                             </LinearGradientBrush>
                                                         </Rectangle.Fill>
                                                     </Rectangle>
-                                                    <!-- Content presenter for hosting the header --> 
-                                                    <ContentPresenter
-	                                                    Content="{Binding DataContext.DisplayName, RelativeSource={RelativeSource TemplatedParent}}"
-	                                                    ContentTemplate="{TemplateBinding HeaderTemplate}" />
-
+                                                    <ContentPresenter Content="{TemplateBinding Header}" 
+                                                              ContentTemplate="{TemplateBinding HeaderTemplate}" />
 
                                                 </Grid>
                                             </Border>
 
                                             <ToggleButton x:Name="MaximizeToggleButton" 
-                              VerticalAlignment="Top" HorizontalAlignment="Right" IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=IsMaximized}"
-                              Margin="0,5,5,0" Width="18" Height="18" Cursor="Hand">
+                              					VerticalAlignment="Top" HorizontalAlignment="Right"
+ 												IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=IsMaximized}"
+                              					Margin="0,5,5,0" Width="20" Height="20" Cursor="Hand">
                                                 <ToggleButton.Template>
                                                     <ControlTemplate TargetType="ToggleButton">
                                                         <Border Background="#7F000000" CornerRadius="2,2,2,2">
@@ -1137,7 +1130,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <Style TargetType="local:DragDockPanelHost">
         <Setter Property="ItemsPanel">
             <Setter.Value>

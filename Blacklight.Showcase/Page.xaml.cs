@@ -397,6 +397,13 @@ namespace Blacklight.Showcase
                                 Link = "http://blogs.msdn.com/mgrayson/archive/2008/08/29/silverlight-2-samples-dragging-docking-expanding-panels-part-3.aspx",
                                 SamplePage = this.dragDockPanelSample
                             },
+                             new Sample()
+                            {
+                                Name = "Drag Dock Panel From ViewModel",
+                                Description = "This is the same as above, however using a VM and a Item Template to create the Panel",
+                                Link = "http://blacklight.codeplex.com",
+                                SamplePage = this.dragDockPanelWithViewModelSample
+                            }
                         }
                     },
                     new NavigationMenu()

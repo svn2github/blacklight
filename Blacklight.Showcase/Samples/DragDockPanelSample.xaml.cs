@@ -21,14 +21,9 @@ namespace Blacklight.Showcase.Samples
     using System.Windows.Media;
     using System.Windows.Media.Animation;
     using System.Windows.Shapes;
-using Blacklight.Controls;
-using System.Collections.ObjectModel;
+    using Blacklight.Controls;
+    using System.Collections.ObjectModel;
 
-    public class Vm
-    {
-        public string DisplayName { get; set; }
-        public object View { get; set; }
-    }
     /// <summary>
     /// The drag dock panel sample.
     /// </summary>
@@ -46,11 +41,7 @@ using System.Collections.ObjectModel;
         {
             this.InitializeComponent();
 
-            //this.dragDockPanelHost.ItemsSource = new List<Vm>
-            //                                         {
-            //                                             new Vm(){DisplayName = "Name1",  View = new Button(){Content = "Hello"}},
-            //                                             new Vm(){DisplayName = "Name2", View = "hI!"}
-            //                                         };
+            dragDockPanelHost.ItemsSource = this.panels;
 
             for (int i = 0; i < 6; i++)
             {
@@ -104,6 +95,7 @@ using System.Collections.ObjectModel;
         /// </summary>
         private void AddPanel()
         {
+            // Classic Panel adding
             this.panels.Add(new Blacklight.Controls.DragDockPanel()
             {
                 Margin = new Thickness(15),

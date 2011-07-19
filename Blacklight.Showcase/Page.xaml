@@ -297,6 +297,7 @@
                                         <samples:DavesGlossyControlsSample Margin="20" x:Name="daveGlossyControlsSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
 
                                         <samples:DragDockPanelSample Margin="20" x:Name="dragDockPanelSample" Loaded="Sample_Loaded" Visibility="Collapsed"  />
+                                        <samples:DragDockPanelWithViewModelSample Margin="20" x:Name="dragDockPanelWithViewModelSample" Loaded="Sample_Loaded" Visibility="Collapsed"  />
                                         <samples:OuterGlowBorderSample Margin="20" x:Name="outerGlowBorderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
                                         <samples:InnerGlowBorderSample Margin="20" x:Name="innerGlowBorderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />
                                         <samples:ClippingBorderSample Margin="20" x:Name="clippingBorderSample" Loaded="Sample_Loaded" Visibility="Collapsed" />

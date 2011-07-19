@@ -111,6 +111,9 @@
       <DependentUpon>ClippingBorderSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\Contributor.cs" />
+    <Compile Include="Samples\DragDockPanelWithViewModelSample.xaml.cs">
+      <DependentUpon>DragDockPanelWithViewModelSample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Samples\DavesGlossyControlsSample.xaml.cs">
       <DependentUpon>DavesGlossyControlsSample.xaml</DependentUpon>
     </Compile>
@@ -212,6 +215,10 @@
     <Page Include="Samples\ClippingBorderSample.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Samples\DragDockPanelWithViewModelSample.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
