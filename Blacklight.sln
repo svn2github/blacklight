@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Controls", "Blacklight.Controls\Blacklight.Controls.csproj", "{49349229-35C7-4589-8622-8165757AEF4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Showcase", "Blacklight.Showcase\Blacklight.Showcase.csproj", "{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blacklight.Showcase.Web", "Blacklight.Showcase.Web\Blacklight.Showcase.Web.csproj", "{48EB5861-626C-493B-A58A-42B2ACE276BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49349229-35C7-4589-8622-8165757AEF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49349229-35C7-4589-8622-8165757AEF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FAB6E39-1E72-4B8C-B096-7D906F304EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EB5861-626C-493B-A58A-42B2ACE276BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

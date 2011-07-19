@@ -1,0 +1,20 @@
+<SourceAnalysisSettings Version="4.2">
+  <Parsers>
+    <Parser ParserId="Microsoft.SourceAnalysis.CSharp.CsParser">
+      <ParserSettings>
+        <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+      </ParserSettings>
+    </Parser>
+  </Parsers>
+  <Analyzers>
+    <Analyzer AnalyzerId="Microsoft.SourceAnalysis.CSharp.NamingRules">
+      <AnalyzerSettings>
+        <CollectionProperty Name="Hungarian">
+          <Value>in</Value>
+          <Value>is</Value>
+          <Value>no</Value>
+        </CollectionProperty>
+      </AnalyzerSettings>
+    </Analyzer>
+  </Analyzers>
+</SourceAnalysisSettings>

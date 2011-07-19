@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Blacklight.Showcase.Samples.InteractionManagerSample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+    <Grid>
+
+        
+        <controls:StrokeTextBlock Text="V I D E O   C O M I N G   V E R Y   S O O N"
+                                  FontFamily="Verdana" FontSize="22"
+                                  StrokeThickness="1" FontWeight="Bold"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  Stroke="#7fffffff"
+                                  />
+        
+    </Grid>
+</UserControl>
