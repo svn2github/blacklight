@@ -211,7 +211,7 @@
                 <TextBlock HorizontalAlignment="Left" Margin="320,0,0,0" VerticalAlignment="Center" Width="Auto" FontFamily="Verdana" FontSize="48" Foreground="#7fFFFFFF" Text="showcase " FontWeight="Normal"/>
                 <StackPanel HorizontalAlignment="Right" Width="Auto" VerticalAlignment="Bottom" Margin="0,0,10,10">
                     <TextBlock Text="C U R R E N T  R E L E A S E" TextWrapping="Wrap" HorizontalAlignment="Right" FontSize="10" Margin="0,0,0,0" Foreground="#FF848484" FontFamily="Verdana"/>
-                    <controls:WebLink Uri="http://www.codeplex.com/blacklight/Release/ProjectReleases.aspx" Text="Click here to download release: v4.3 (Dec09)" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,0,5" FontSize="12" Foreground="#FFFFFFFF" FontFamily="Verdana"/>
+                    <controls:WebLink Uri="http://www.codeplex.com/blacklight/Release/ProjectReleases.aspx" Text="Click here to download release: v4.4 (Jul11)" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,0,5" FontSize="12" Foreground="#FFFFFFFF" FontFamily="Verdana"/>
                 </StackPanel>
             </Grid>
         </Border>
