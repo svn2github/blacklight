@@ -1,0 +1,15 @@
+﻿<Window x:Class="Blacklight.Showcase.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:Blacklight.Controls.Wpf;assembly=Blacklight.Controls.Wpf"
+        xmlns:Samples="clr-namespace:Blacklight.Showcase.Wpf.Samples" Title="MainWindow">
+    <Window.Resources>
+        <ResourceDictionary Source="/Blacklight.Showcase.Wpf;component/ResourceDictionaries/DavesGlossyControls.xaml"/>
+                        
+
+    </Window.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="Black">
+        <Samples:DragDockPanelSample/>
+    </Grid>
+</Window>
