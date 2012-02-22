@@ -110,8 +110,8 @@ namespace Blacklight.Controls.Wpf
             this.sizeAnimationHeightKeyFrame.Value = 0;
             heightAnimation.KeyFrames.Add(this.sizeAnimationHeightKeyFrame);
             
-            this.sizeAnimation.Children.Add(widthAnimation);
-            this.sizeAnimation.Children.Add(heightAnimation);
+           // this.sizeAnimation.Children.Add(widthAnimation);
+           // this.sizeAnimation.Children.Add(heightAnimation);
             this.sizeAnimation.Completed += new EventHandler(this.SizeAnimation_Completed);
 
             this.positionAnimation = new Storyboard();
@@ -142,8 +142,8 @@ namespace Blacklight.Controls.Wpf
             this.positionAnimationYKeyFrame.Value = 0;
             positionYAnimation.KeyFrames.Add(this.positionAnimationYKeyFrame);
 
-            this.positionAnimation.Children.Add(positionXAnimation);
-            this.positionAnimation.Children.Add(positionYAnimation);
+           // this.positionAnimation.Children.Add(positionXAnimation);
+           // this.positionAnimation.Children.Add(positionYAnimation);
 
             this.positionAnimation.Completed += new EventHandler(this.PositionAnimation_Completed);
         }
