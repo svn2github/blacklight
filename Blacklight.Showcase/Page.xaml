@@ -1,13 +1,15 @@
 ﻿<UserControl x:Class="Blacklight.Showcase.Page"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-    Width="Auto" Height="Auto" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows"
-             xmlns:samples="clr-namespace:Blacklight.Showcase.Samples"
-             xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
+    Width="Auto" Height="Auto" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" 
+    xmlns:samples="clr-namespace:Blacklight.Showcase.Samples"
+    xmlns:controls="clr-namespace:Blacklight.Controls;assembly=Blacklight.Controls">
  
-    <UserControl.Resources>
-
-        <controls:ResourceDictionaryManager x:Key="ResourceDictionaryManager">
+    <UserControl.Resources>        
+            <controls:ResourceDictionaryManager x:Key="ResourceDictionaryManager">
         <controls:ResourceDictionaryManager.ResourceDictionaries>
             <controls:ResourceDictionaryCollection>
 
@@ -25,42 +27,42 @@
 
         <ControlTemplate x:Key="SampleTabRadioButton" TargetType="RadioButton">
             <controls:ClippingBorder Margin="0,0,0,-5" Background="#FF000000" BorderBrush="#FF333333" BorderThickness="2,2,2,2" CornerRadius="5,5,0,0" x:Name="clippingBorder" ClipContent="True">
-                <vsm:VisualStateManager.VisualStateGroups>
-                    <vsm:VisualStateGroup x:Name="CheckStates">
-                        <vsm:VisualState x:Name="Unchecked"/>
-                        <vsm:VisualState x:Name="Checked">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CheckStates">
+                        <VisualState x:Name="Unchecked"/>
+                        <VisualState x:Name="Checked">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="clippingBorder" Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)">
                                     <SplineColorKeyFrame KeyTime="00:00:00" Value="#FF333333"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="Indeterminate"/>
-                    </vsm:VisualStateGroup>
-                    <vsm:VisualStateGroup x:Name="CommonStates">
-                        <vsm:VisualState x:Name="Normal"/>
-                        <vsm:VisualState x:Name="MouseOver">
+                        </VisualState>
+                        <VisualState x:Name="Indeterminate"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="MouseOver">
                             <Storyboard>
                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="flash" Storyboard.TargetProperty="(UIElement.Opacity)">
                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.5"/>
                                     <SplineDoubleKeyFrame KeyTime="00:00:00.2000000" Value="0.2"/>
                                 </DoubleAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="Pressed">
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
                             <Storyboard>
                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="flash" Storyboard.TargetProperty="(UIElement.Opacity)">
                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0.1"/>
                                 </DoubleAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="Disabled"/>
-                    </vsm:VisualStateGroup>
-                    <vsm:VisualStateGroup x:Name="FocusStates">
-                        <vsm:VisualState x:Name="Unfocused"/>
-                        <vsm:VisualState x:Name="Focused"/>
-                    </vsm:VisualStateGroup>
-                </vsm:VisualStateManager.VisualStateGroups>
+                        </VisualState>
+                        <VisualState x:Name="Disabled"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="Unfocused"/>
+                        <VisualState x:Name="Focused"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
                 <Grid Height="Auto" Width="Auto" Margin="0,0,0,5">
                     <ContentPresenter Margin="3,3,3,3" d:LayoutOverrides="Width, Height"/>
                     <Rectangle Fill="#FFFFFFFF" Stroke="#FFFFFFFF" Margin="0,0,0,-5" x:Name="flash" Opacity="0"/>
@@ -70,49 +72,49 @@
 
         <ControlTemplate x:Key="NavigationRadioButtonTemplate" TargetType="RadioButton">
             <Border Padding="15,8,15,8" x:Name="rootBorder" Background="#00FFFFFF">
-                <vsm:VisualStateManager.VisualStateGroups>
-                    <vsm:VisualStateGroup x:Name="CommonStates">
-                        <vsm:VisualState x:Name="Disabled"/>
-                        <vsm:VisualState x:Name="Normal">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Disabled"/>
+                        <VisualState x:Name="Normal">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                     <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#00FFFFFF"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="MouseOver">
+                        </VisualState>
+                        <VisualState x:Name="MouseOver">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                     <SplineColorKeyFrame KeyTime="00:00:00" Value="#99FFFFFF"/>
                                     <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#4CFFFFFF"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="Pressed">
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                     <SplineColorKeyFrame KeyTime="00:00:00" Value="#33FFFFFF"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                    </vsm:VisualStateGroup>
-                    <vsm:VisualStateGroup x:Name="FocusStates">
-                        <vsm:VisualState x:Name="ContentFocused"/>
-                        <vsm:VisualState x:Name="Unfocused"/>
-                        <vsm:VisualState x:Name="Focused"/>
-                    </vsm:VisualStateGroup>
-                    <vsm:VisualStateGroup x:Name="CheckStates">
-                        <vsm:VisualState x:Name="Unchecked"/>
-                        <vsm:VisualState x:Name="Checked">
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="ContentFocused"/>
+                        <VisualState x:Name="Unfocused"/>
+                        <VisualState x:Name="Focused"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CheckStates">
+                        <VisualState x:Name="Unchecked"/>
+                        <VisualState x:Name="Checked">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="checkedRectangle" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                                     <SplineColorKeyFrame KeyTime="00:00:00" Value="#ff333333"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="Indeterminate"/>
-                    </vsm:VisualStateGroup>
-                </vsm:VisualStateManager.VisualStateGroups>
+                        </VisualState>
+                        <VisualState x:Name="Indeterminate"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
                 <Grid>
                     <Rectangle Margin="-14,-7,-14,-7" Fill="#00333333" x:Name="checkedRectangle"/>
                     <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
@@ -127,49 +129,49 @@
 
         <ControlTemplate x:Key="MenuRadioButtonTemplate" TargetType="RadioButton">
             <Border Padding="5,5,5,5" x:Name="rootBorder" Background="#00FFFFFF" CornerRadius="3,3,3,3">
-                <vsm:VisualStateManager.VisualStateGroups>
-                    <vsm:VisualStateGroup x:Name="CommonStates">
-                        <vsm:VisualState x:Name="Disabled"/>
-                        <vsm:VisualState x:Name="Normal">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Disabled"/>
+                        <VisualState x:Name="Normal">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                     <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#00FFFFFF"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="MouseOver">
+                        </VisualState>
+                        <VisualState x:Name="MouseOver">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                                     <SplineColorKeyFrame KeyTime="00:00:00" Value="#99FFFFFF"/>
                                     <SplineColorKeyFrame KeyTime="00:00:00.2000000" Value="#4CFFFFFF"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="Pressed">
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
                         	<Storyboard>
                         		<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="rootBorder" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)">
                         			<SplineColorKeyFrame KeyTime="00:00:00" Value="#33FFFFFF"/>
                         		</ColorAnimationUsingKeyFrames>
                         	</Storyboard>
-                        </vsm:VisualState>
-                    </vsm:VisualStateGroup>
-                    <vsm:VisualStateGroup x:Name="FocusStates">
-                        <vsm:VisualState x:Name="ContentFocused"/>
-                        <vsm:VisualState x:Name="Unfocused"/>
-                        <vsm:VisualState x:Name="Focused"/>
-                    </vsm:VisualStateGroup>
-                    <vsm:VisualStateGroup x:Name="CheckStates">
-                        <vsm:VisualState x:Name="Unchecked"/>
-                        <vsm:VisualState x:Name="Checked">
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="FocusStates">
+                        <VisualState x:Name="ContentFocused"/>
+                        <VisualState x:Name="Unfocused"/>
+                        <VisualState x:Name="Focused"/>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CheckStates">
+                        <VisualState x:Name="Unchecked"/>
+                        <VisualState x:Name="Checked">
                             <Storyboard>
                                 <ColorAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="checkedRectangle" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
                                     <SplineColorKeyFrame KeyTime="00:00:00" Value="#664792DE"/>
                                 </ColorAnimationUsingKeyFrames>
                             </Storyboard>
-                        </vsm:VisualState>
-                        <vsm:VisualState x:Name="Indeterminate"/>
-                    </vsm:VisualStateGroup>
-                </vsm:VisualStateManager.VisualStateGroups>
+                        </VisualState>
+                        <VisualState x:Name="Indeterminate"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
                 <Grid>
                     <Rectangle Margin="-4,-4,-4,-4" Fill="#004792DE" RadiusX="3" RadiusY="3" x:Name="checkedRectangle"/>
                     <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />

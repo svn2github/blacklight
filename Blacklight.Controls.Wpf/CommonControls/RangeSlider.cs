@@ -97,6 +97,10 @@ namespace Blacklight.Controls.Wpf
         /// </summary>
         private Border selectedRangeBorder;
 
+
+        // This thumbWidth could change if you restyle the thumbs.
+        private int thumbWidth = 10;
+
         /// <summary>
         /// RangeSlider constructor.
         /// </summary>
@@ -116,13 +120,13 @@ namespace Blacklight.Controls.Wpf
         /// </summary>
         public double Minimum
         {
-            get 
-            { 
-                return (double)GetValue(MinimumProperty); 
+            get
+            {
+                return (double)GetValue(MinimumProperty);
             }
-            
-            set 
-            { 
+
+            set
+            {
                 SetValue(MinimumProperty, Math.Min(this.Maximum, Math.Max(0, value)));
 
                 if (this.Maximum - this.Minimum < this.MinimumRangeSpan)
@@ -137,13 +141,13 @@ namespace Blacklight.Controls.Wpf
         /// </summary>
         public double Maximum
         {
-            get 
-            { 
-                return (double)GetValue(MaximumProperty); 
+            get
+            {
+                return (double)GetValue(MaximumProperty);
             }
 
-            set 
-            { 
+            set
+            {
                 SetValue(MaximumProperty, Math.Max(this.Minimum, value));
 
                 if (this.Maximum - this.Minimum < this.MinimumRangeSpan)
@@ -158,13 +162,13 @@ namespace Blacklight.Controls.Wpf
         /// </summary>
         public double MinimumRangeSpan
         {
-            get 
-            { 
-                return (double)GetValue(MinimumRangeSpanProperty); 
+            get
+            {
+                return (double)GetValue(MinimumRangeSpanProperty);
             }
-            
-            set 
-            { 
+
+            set
+            {
                 SetValue(MinimumRangeSpanProperty, Math.Min(this.Maximum - this.Minimum, value));
                 this.UpdateSelectedRangeMinimumWidth();
                 this.UpdateRange(false);
@@ -297,16 +301,16 @@ namespace Blacklight.Controls.Wpf
             {
                 double startMargin = this.selectedRangeBorder.Margin.Left + e.HorizontalChange;
                 double endMargin = this.selectedRangeBorder.Margin.Right - e.HorizontalChange;
-                
+
                 if (startMargin + e.HorizontalChange <= 0)
                 {
                     startMargin = 0;
-                    endMargin = this.ActualWidth - (((this.RangeEnd - this.RangeStart) / (this.Maximum - this.Minimum)) * this.ActualWidth);
+                    endMargin = (this.ActualWidth - thumbWidth) - (((this.RangeEnd - this.RangeStart) / (this.Maximum - this.Minimum)) * (this.ActualWidth - thumbWidth));
                 }
                 else if (endMargin - e.HorizontalChange <= 0)
                 {
                     endMargin = 0;
-                    startMargin = this.ActualWidth - (((this.RangeEnd - this.RangeStart) / (this.Maximum - this.Minimum)) * this.ActualWidth);
+                    startMargin = (this.ActualWidth - thumbWidth) - (((this.RangeEnd - this.RangeStart) / (this.Maximum - this.Minimum)) * (this.ActualWidth - thumbWidth));
                 }
 
                 if (!double.IsNaN(startMargin) && !double.IsNaN(endMargin))
@@ -358,7 +362,7 @@ namespace Blacklight.Controls.Wpf
         {
             if (this.selectedRangeBorder != null)
             {
-                double startMargin = Math.Min(this.ActualWidth - this.selectedRangeBorder.MinWidth,  Math.Max(0, this.selectedRangeBorder.Margin.Left + e.HorizontalChange));
+                double startMargin = Math.Min(this.ActualWidth - this.selectedRangeBorder.MinWidth, Math.Max(0, this.selectedRangeBorder.Margin.Left + e.HorizontalChange));
                 double endMargin = this.selectedRangeBorder.Margin.Right;
 
                 if (this.ActualWidth - startMargin - endMargin < this.selectedRangeBorder.MinWidth)
@@ -387,7 +391,7 @@ namespace Blacklight.Controls.Wpf
             {
                 this.selectedRangeBorder.MinWidth = Math.Max(
                     this.rangeStartThumb.ActualWidth + this.rangeEndThumb.ActualWidth,
-                    (this.MinimumRangeSpan / ((this.Maximum - this.Minimum) == 0 ? 1 : (this.Maximum - this.Minimum))) * this.ActualWidth);
+                    (this.MinimumRangeSpan / ((this.Maximum - this.Minimum) == 0 ? 1 : (this.Maximum - this.Minimum))) * (this.ActualWidth - thumbWidth));
             }
         }
 
@@ -398,8 +402,8 @@ namespace Blacklight.Controls.Wpf
         {
             if (this.selectedRangeBorder != null)
             {
-                double startMargin = (this.RangeStart / (this.Maximum - this.Minimum)) * this.ActualWidth;
-                double endMargin = ((this.Maximum - this.RangeEnd) / (this.Maximum - this.Minimum)) * this.ActualWidth;
+                double startMargin = (this.RangeStart / (this.Maximum - this.Minimum)) * (this.ActualWidth - thumbWidth);
+                double endMargin = ((this.Maximum - this.RangeEnd) / (this.Maximum - this.Minimum)) * (this.ActualWidth - thumbWidth);
 
                 if (!double.IsNaN(startMargin) && !double.IsNaN(endMargin))
                 {
@@ -421,8 +425,8 @@ namespace Blacklight.Controls.Wpf
             if (this.selectedRangeBorder != null)
             {
                 bool rangeChanged = false;
-                double rangeStart = ((this.Maximum - this.Minimum) * (this.selectedRangeBorder.Margin.Left / this.ActualWidth)) + this.Minimum;
-                double rangeEnd = this.Maximum - ((this.Maximum - this.Minimum) * (this.selectedRangeBorder.Margin.Right / this.ActualWidth));
+                double rangeStart = ((this.Maximum - this.Minimum) * (this.selectedRangeBorder.Margin.Left / (this.ActualWidth - thumbWidth))) + this.Minimum;
+                double rangeEnd = this.Maximum - ((this.Maximum - this.Minimum) * (this.selectedRangeBorder.Margin.Right / (this.ActualWidth - thumbWidth)));
 
                 if (rangeEnd - rangeStart < this.MinimumRangeSpan)
                 {

@@ -189,31 +189,31 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                 <GradientStop Color="#1EFFFFFF" Offset="0.325"/>
                             </LinearGradientBrush>
                         </Grid.Resources>
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualStateGroup.Transitions>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
 
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.2000000"/>
+                                    <VisualTransition GeneratedDuration="00:00:00.2000000"/>
 
-                                </vsm:VisualStateGroup.Transitions>
-                                <vsm:VisualState x:Name="Normal">
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal">
                                     <Storyboard/>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="MouseOver">
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Pressed">
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Disabled">
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -222,24 +222,24 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="FocusStates">
-                                <vsm:VisualStateGroup.Transitions>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1000000"/>
-                                </vsm:VisualStateGroup.Transitions>
-                                <vsm:VisualState x:Name="Focused">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="00:00:00.1000000"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Focused">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unfocused">
+                                </VisualState>
+                                <VisualState x:Name="Unfocused">
                                     <Storyboard/>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Stroke="{StaticResource GlossyBlack_StrokeGradient}"/>
@@ -294,37 +294,37 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                         <Grid.Resources>
                             <ControlTemplate x:Key="RepeatButtonTemplate" TargetType="RepeatButton">
                                 <Grid x:Name="Root" Background="Transparent">
-                                    <vsm:VisualStateManager.VisualStateGroups>
-                                        <vsm:VisualStateGroup x:Name="CommonStates">
-                                            <vsm:VisualState x:Name="Normal"/>
-                                        </vsm:VisualStateGroup>
-                                    </vsm:VisualStateManager.VisualStateGroups>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Normal"/>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
                                 </Grid>
                             </ControlTemplate>
                             <ControlTemplate x:Key="HorizontalIncrementTemplate" TargetType="RepeatButton">
                                 <Grid x:Name="Root">
-                                    <vsm:VisualStateManager.VisualStateGroups>
-                                        <vsm:VisualStateGroup x:Name="CommonStates">
-                                            <vsm:VisualStateGroup.Transitions>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
-                                            </vsm:VisualStateGroup.Transitions>
-                                            <vsm:VisualState x:Name="Normal"/>
-                                            <vsm:VisualState x:Name="MouseOver">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="Normal"/>
+                                            <VisualState x:Name="MouseOver">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Pressed">
+                                            </VisualState>
+                                            <VisualState x:Name="Pressed">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Disabled">
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -333,9 +333,9 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                        </vsm:VisualStateGroup>
-                                    </vsm:VisualStateManager.VisualStateGroups>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
                                     <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                         <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
                                         <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Stroke="{StaticResource GlossyBlack_StrokeGradient}"/>
@@ -361,28 +361,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                             </ControlTemplate>
                             <ControlTemplate x:Key="HorizontalDecrementTemplate" TargetType="RepeatButton">
                                 <Grid x:Name="Root">
-                                    <vsm:VisualStateManager.VisualStateGroups>
-                                        <vsm:VisualStateGroup x:Name="CommonStates">
-                                            <vsm:VisualStateGroup.Transitions>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
-                                            </vsm:VisualStateGroup.Transitions>
-                                            <vsm:VisualState x:Name="Normal"/>
-                                            <vsm:VisualState x:Name="MouseOver">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="Normal"/>
+                                            <VisualState x:Name="MouseOver">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Pressed">
+                                            </VisualState>
+                                            <VisualState x:Name="Pressed">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Disabled">
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -391,9 +391,9 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                        </vsm:VisualStateGroup>
-                                    </vsm:VisualStateManager.VisualStateGroups>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
                                     <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                         <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
                                         <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Stroke="{StaticResource GlossyBlack_StrokeGradient}"/>
@@ -419,28 +419,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                             </ControlTemplate>
                             <ControlTemplate x:Key="VerticalIncrementTemplate" TargetType="RepeatButton">
                                 <Grid x:Name="Root">
-                                    <vsm:VisualStateManager.VisualStateGroups>
-                                        <vsm:VisualStateGroup x:Name="CommonStates">
-                                            <vsm:VisualStateGroup.Transitions>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
-                                            </vsm:VisualStateGroup.Transitions>
-                                            <vsm:VisualState x:Name="Normal"/>
-                                            <vsm:VisualState x:Name="MouseOver">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="Normal"/>
+                                            <VisualState x:Name="MouseOver">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Pressed">
+                                            </VisualState>
+                                            <VisualState x:Name="Pressed">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Disabled">
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -449,9 +449,9 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                        </vsm:VisualStateGroup>
-                                    </vsm:VisualStateManager.VisualStateGroups>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
                                     <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                         <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
                                         <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Stroke="{StaticResource GlossyBlack_StrokeGradient}"/>
@@ -486,28 +486,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                             </ControlTemplate>
                             <ControlTemplate x:Key="VerticalDecrementTemplate" TargetType="RepeatButton">
                                 <Grid x:Name="Root">
-                                    <vsm:VisualStateManager.VisualStateGroups>
-                                        <vsm:VisualStateGroup x:Name="CommonStates">
-                                            <vsm:VisualStateGroup.Transitions>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
-                                            </vsm:VisualStateGroup.Transitions>
-                                            <vsm:VisualState x:Name="Normal"/>
-                                            <vsm:VisualState x:Name="MouseOver">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="Normal"/>
+                                            <VisualState x:Name="MouseOver">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Pressed">
+                                            </VisualState>
+                                            <VisualState x:Name="Pressed">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Disabled">
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -516,9 +516,9 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                        </vsm:VisualStateGroup>
-                                    </vsm:VisualStateManager.VisualStateGroups>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
                                     <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                         <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
                                         <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Stroke="{StaticResource GlossyBlack_StrokeGradient}"/>
@@ -545,28 +545,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                             </ControlTemplate>
                             <ControlTemplate x:Key="VerticalThumbTemplate" TargetType="Thumb">
                                 <Grid>
-                                    <vsm:VisualStateManager.VisualStateGroups>
-                                        <vsm:VisualStateGroup x:Name="CommonStates">
-                                            <vsm:VisualStateGroup.Transitions>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
-                                            </vsm:VisualStateGroup.Transitions>
-                                            <vsm:VisualState x:Name="Normal"/>
-                                            <vsm:VisualState x:Name="MouseOver">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="Normal"/>
+                                            <VisualState x:Name="MouseOver">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Pressed">
+                                            </VisualState>
+                                            <VisualState x:Name="Pressed">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Disabled">
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ThumbVisual" Storyboard.TargetProperty="Opacity">
                                                         <SplineDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
@@ -578,9 +578,9 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                        </vsm:VisualStateGroup>
-                                    </vsm:VisualStateManager.VisualStateGroups>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
                                     <Grid Margin="1,0,1,0" x:Name="ThumbVisual">
                                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
@@ -608,28 +608,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                             </ControlTemplate>
                             <ControlTemplate x:Key="HorizontalThumbTemplate" TargetType="Thumb">
                                 <Grid>
-                                    <vsm:VisualStateManager.VisualStateGroups>
-                                        <vsm:VisualStateGroup x:Name="CommonStates">
-                                            <vsm:VisualStateGroup.Transitions>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
-                                                <vsm:VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
-                                            </vsm:VisualStateGroup.Transitions>
-                                            <vsm:VisualState x:Name="Normal"/>
-                                            <vsm:VisualState x:Name="MouseOver">
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualStateGroup.Transitions>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="MouseOver"/>
+                                                <VisualTransition GeneratedDuration="0:0:0.1" To="Pressed"/>
+                                            </VisualStateGroup.Transitions>
+                                            <VisualState x:Name="Normal"/>
+                                            <VisualState x:Name="MouseOver">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Pressed">
+                                            </VisualState>
+                                            <VisualState x:Name="Pressed">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                            <vsm:VisualState x:Name="Disabled">
+                                            </VisualState>
+                                            <VisualState x:Name="Disabled">
                                                 <Storyboard>
                                                     <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ThumbVisual" Storyboard.TargetProperty="Opacity">
                                                         <SplineDoubleKeyFrame KeyTime="0:0:0" Value="0"/>
@@ -641,9 +641,9 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                                         <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                                     </DoubleAnimationUsingKeyFrames>
                                                 </Storyboard>
-                                            </vsm:VisualState>
-                                        </vsm:VisualStateGroup>
-                                    </vsm:VisualStateManager.VisualStateGroups>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
                                     <Grid Margin="0,1,0,1" x:Name="ThumbVisual">
                                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
@@ -669,19 +669,19 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                 </Grid>
                             </ControlTemplate>
                         </Grid.Resources>
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver"/>
-                                <vsm:VisualState x:Name="Disabled">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver"/>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Root" Storyboard.TargetProperty="Opacity">
                                             <SplineDoubleKeyFrame KeyTime="0" Value="0.5"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid x:Name="HorizontalRoot" Visibility="Visible">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -736,20 +736,20 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
             <Setter.Value>
                 <ControlTemplate TargetType="ListBoxItem">
                     <Grid Background="{TemplateBinding Background}">
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="SelectionStates">
-                                <vsm:VisualState x:Name="Unselected"/>
-                                <vsm:VisualState x:Name="Selected">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="SelectionStates">
+                                <VisualState x:Name="Unselected"/>
+                                <VisualState x:Name="Selected">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="SelectedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -758,15 +758,15 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="FocusStates">
-                                <vsm:VisualState x:Name="Focused">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
                                     <Storyboard/>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unfocused"/>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState" Opacity="1">
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_ListItemBackground}"/>
                         </Grid>
@@ -881,22 +881,22 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">
                     <Grid x:Name="RootElement">
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualStateGroup.Transitions>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="ReadOnly"/>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="Disabled"/>
-                                </vsm:VisualStateGroup.Transitions>
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="ReadOnly"/>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="Disabled"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Disabled">
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -905,24 +905,24 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             <SplineColorKeyFrame KeyTime="00:00:00" Value="#FF808080"/>
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="ReadOnly">
+                                </VisualState>
+                                <VisualState x:Name="ReadOnly">
                                     <Storyboard/>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="FocusStates">
-                                <vsm:VisualState x:Name="Focused">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unfocused">
+                                </VisualState>
+                                <VisualState x:Name="Unfocused">
                                     <Storyboard/>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
 
                         <Grid Margin="0,0,0,0" x:Name="NormalState">
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_TextBoxBackgroundGradient}">
@@ -991,28 +991,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                     <Setter.Value>
                                         <ControlTemplate TargetType="ToggleButton">
                                             <Grid>
-                                                <vsm:VisualStateManager.VisualStateGroups>
-                                                    <vsm:VisualStateGroup x:Name="CommonStates">
-                                                        <vsm:VisualStateGroup.Transitions>
-                                                            <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
-                                                            <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
-                                                        </vsm:VisualStateGroup.Transitions>
-                                                        <vsm:VisualState x:Name="Normal"/>
-                                                        <vsm:VisualState x:Name="MouseOver">
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup x:Name="CommonStates">
+                                                        <VisualStateGroup.Transitions>
+                                                            <VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
+                                                            <VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
+                                                        </VisualStateGroup.Transitions>
+                                                        <VisualState x:Name="Normal"/>
+                                                        <VisualState x:Name="MouseOver">
                                                             <Storyboard>
                                                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                                 </DoubleAnimationUsingKeyFrames>
                                                             </Storyboard>
-                                                        </vsm:VisualState>
-                                                        <vsm:VisualState x:Name="Pressed">
+                                                        </VisualState>
+                                                        <VisualState x:Name="Pressed">
                                                             <Storyboard>
                                                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                                 </DoubleAnimationUsingKeyFrames>
                                                             </Storyboard>
-                                                        </vsm:VisualState>
-                                                        <vsm:VisualState x:Name="Disabled">
+                                                        </VisualState>
+                                                        <VisualState x:Name="Disabled">
                                                             <Storyboard>
                                                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -1021,29 +1021,29 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                                                 </DoubleAnimationUsingKeyFrames>
                                                             </Storyboard>
-                                                        </vsm:VisualState>
-                                                    </vsm:VisualStateGroup>
-                                                    <vsm:VisualStateGroup x:Name="CheckStates">
-                                                        <vsm:VisualState x:Name="Checked">
+                                                        </VisualState>
+                                                    </VisualStateGroup>
+                                                    <VisualStateGroup x:Name="CheckStates">
+                                                        <VisualState x:Name="Checked">
                                                             <Storyboard>
                                                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                                 </DoubleAnimationUsingKeyFrames>
                                                             </Storyboard>
-                                                        </vsm:VisualState>
-                                                        <vsm:VisualState x:Name="Unchecked"/>
-                                                    </vsm:VisualStateGroup>
-                                                    <vsm:VisualStateGroup x:Name="FocusStates">
-                                                        <vsm:VisualState x:Name="Focused">
+                                                        </VisualState>
+                                                        <VisualState x:Name="Unchecked"/>
+                                                    </VisualStateGroup>
+                                                    <VisualStateGroup x:Name="FocusStates">
+                                                        <VisualState x:Name="Focused">
                                                             <Storyboard>
                                                                 <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                                                     <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                                                 </DoubleAnimationUsingKeyFrames>
                                                             </Storyboard>
-                                                        </vsm:VisualState>
-                                                        <vsm:VisualState x:Name="Unfocused"/>
-                                                    </vsm:VisualStateGroup>
-                                                </vsm:VisualStateManager.VisualStateGroups>
+                                                        </VisualState>
+                                                        <VisualState x:Name="Unfocused"/>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
                                                 <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                                     <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
                                                     <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Stroke="{StaticResource GlossyBlack_StrokeGradient}"/>
@@ -1071,27 +1071,27 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                 </Setter>
                             </Style>
                         </Grid.Resources>
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualStateGroup.Transitions>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1"/>
-                                </vsm:VisualStateGroup.Transitions>
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver"/>
-                                <vsm:VisualState x:Name="Disabled">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="00:00:00.1"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver"/>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="FocusStates">
-                                <vsm:VisualState x:Name="Focused">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
                                     <Storyboard/>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unfocused"/>
-                                <vsm:VisualState x:Name="FocusedDropDown">
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                                <VisualState x:Name="FocusedDropDown">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Duration="00:00:00" Storyboard.TargetName="PopupBorder" Storyboard.TargetProperty="(UIElement.Visibility)">
                                             <DiscreteObjectKeyFrame KeyTime="00:00:00">
@@ -1101,9 +1101,9 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Border x:Name="ContentPresenterBorder">
                             <Grid>
                                 <ToggleButton BorderThickness="{TemplateBinding BorderThickness}" HorizontalContentAlignment="Right" HorizontalAlignment="Stretch" Margin="-1" x:Name="DropDownToggle" Style="{StaticResource comboToggleStyle}" VerticalAlignment="Stretch" Foreground="{StaticResource GlossyBlack_GreyStateBackground}" BorderBrush="{StaticResource GlossyBlack_StrokeGradient}" Background="{StaticResource GlossyBlack_BackgroundGradient}">
@@ -1152,28 +1152,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                             <ColumnDefinition Width="16"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualStateGroup.Transitions>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
-                                </vsm:VisualStateGroup.Transitions>
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Pressed">
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Disabled">
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -1182,36 +1182,36 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="CheckStates">
-                                <vsm:VisualState x:Name="Checked">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="CheckIcon" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="0" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unchecked"/>
-                                <vsm:VisualState x:Name="Indeterminate">
+                                </VisualState>
+                                <VisualState x:Name="Unchecked"/>
+                                <VisualState x:Name="Indeterminate">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="IndeterminateState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="FocusStates">
-                                <vsm:VisualState x:Name="Focused">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unfocused"/>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="16" Height="16">
                             <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                 <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
@@ -1283,28 +1283,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                             <ColumnDefinition Width="16"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualStateGroup.Transitions>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
-                                </vsm:VisualStateGroup.Transitions>
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Pressed">
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Disabled">
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -1313,29 +1313,29 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="CheckStates">
-                                <vsm:VisualState x:Name="Checked">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unchecked"/>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="FocusStates">
-                                <vsm:VisualState x:Name="Focused">
+                                </VisualState>
+                                <VisualState x:Name="Unchecked"/>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unfocused"/>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="16" Height="16">
                             <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                                 <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="8" RadiusY="8" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
@@ -1383,28 +1383,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
             <Setter.Value>
                 <ControlTemplate TargetType="Thumb">
                     <Grid>
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualStateGroup.Transitions>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
-                                </vsm:VisualStateGroup.Transitions>
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Pressed">
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Disabled">
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -1413,19 +1413,19 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="FocusStates">
-                                <vsm:VisualState x:Name="Focused">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unfocused"/>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Stroke="{StaticResource GlossyBlack_StrokeGradient}"/>
@@ -1469,28 +1469,28 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
             <Setter.Value>
                 <ControlTemplate TargetType="Thumb">
                     <Grid>
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualStateGroup.Transitions>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
-                                    <vsm:VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
-                                </vsm:VisualStateGroup.Transitions>
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="MouseOver"/>
+                                    <VisualTransition GeneratedDuration="00:00:00.1" To="Pressed"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Pressed">
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="PressedState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Disabled">
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="DisabledState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
@@ -1499,19 +1499,19 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                            <vsm:VisualStateGroup x:Name="FocusStates">
-                                <vsm:VisualState x:Name="Focused">
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Duration="00:00:00.0010000" Storyboard.TargetName="MouseOverState" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                                <vsm:VisualState x:Name="Unfocused"/>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="Auto" Height="Auto" x:Name="NormalState">
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_BackgroundGradient}"/>
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Stroke="{StaticResource GlossyBlack_StrokeGradient}"/>
@@ -1562,19 +1562,19 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                 <Grid x:Name="Root" Background="Transparent" Opacity="0"/>
                             </ControlTemplate>
                         </Grid.Resources>
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualState x:Name="Normal"/>
-                                <vsm:VisualState x:Name="MouseOver"/>
-                                <vsm:VisualState x:Name="Disabled">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver"/>
+                                <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Root" Storyboard.TargetProperty="(UIElement.Opacity)">
                                             <SplineDoubleKeyFrame KeyTime="0" Value="0.5"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid x:Name="HorizontalTemplate" Background="{TemplateBinding Background}">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -1629,10 +1629,10 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
             <Setter.Value>
                 <ControlTemplate TargetType="ProgressBar">
                     <Grid x:Name="Root">
-                        <vsm:VisualStateManager.VisualStateGroups>
-                            <vsm:VisualStateGroup x:Name="CommonStates">
-                                <vsm:VisualState x:Name="Determinate"/>
-                                <vsm:VisualState x:Name="Indeterminate">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Determinate"/>
+                                <VisualState x:Name="Indeterminate">
                                     <Storyboard RepeatBehavior="Forever">
                                         <ObjectAnimationUsingKeyFrames Duration="00:00:00" Storyboard.TargetName="IndeterminateRoot" Storyboard.TargetProperty="(UIElement.Visibility)">
                                             <DiscreteObjectKeyFrame KeyTime="00:00:00">
@@ -1653,9 +1653,9 @@ v1.2	06-10-08	Fixed some small bugs with scrollbar and scrollviewer
                                             <SplineDoubleKeyFrame KeyTime="00:00:.5" Value="20"/>
                                         </DoubleAnimationUsingKeyFrames>
                                     </Storyboard>
-                                </vsm:VisualState>
-                            </vsm:VisualStateGroup>
-                        </vsm:VisualStateManager.VisualStateGroups>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                         <Grid Margin="0,0,0,0" x:Name="NormalState">
                             <Rectangle HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" RadiusX="0" RadiusY="0" Fill="{StaticResource GlossyBlack_TextBoxBackgroundGradient}">
                             </Rectangle>

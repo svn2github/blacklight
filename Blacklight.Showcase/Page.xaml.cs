@@ -24,6 +24,7 @@ namespace Blacklight.Showcase
     using System.Windows.Shapes;
     using System.Collections.ObjectModel;
 
+
     /// <summary>
     /// The demo main page.
     /// </summary>

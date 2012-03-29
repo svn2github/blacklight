@@ -107,14 +107,14 @@
       <DependentUpon>ClippingBorderSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\Contributor.cs" />
+    <Compile Include="Samples\DeepZoomViewerSample.xaml.cs">
+      <DependentUpon>DeepZoomViewerSample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Samples\DragDockPanelWithViewModelSample.xaml.cs">
       <DependentUpon>DragDockPanelWithViewModelSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\DavesGlossyControlsSample.xaml.cs">
       <DependentUpon>DavesGlossyControlsSample.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Samples\DeepZoomViewerSample.xaml.cs">
-      <DependentUpon>DeepZoomViewerSample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Samples\DragDockPanelSample.xaml.cs">
       <DependentUpon>DragDockPanelSample.xaml</DependentUpon>
@@ -214,6 +214,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Samples\DeepZoomViewerSample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Samples\DragDockPanelWithViewModelSample.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -221,12 +225,6 @@
     <Page Include="Samples\DavesGlossyControlsSample.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Samples\DeepZoomViewerSample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -279,8 +277,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Samples\MediaPlayerSample.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -73,6 +73,8 @@
     <Compile Include="Dashboards\PanelState.cs" />
     <Compile Include="Eventing\DragEvent.cs" />
     <Compile Include="Helpers\MathHelper.cs" />
+    <Compile Include="Panels\AnimatedLayoutPanel.cs" />
+    <Compile Include="Panels\TransformInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
